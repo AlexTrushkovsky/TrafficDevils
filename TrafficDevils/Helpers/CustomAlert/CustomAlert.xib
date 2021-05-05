@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbO-zo-yps" customClass="CustomAlert" customModule="TrafficDevils" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="snh-Xw-hjI">
+                    <rect key="frame" x="0.0" y="0.0" width="314" height="170"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="Eyk-6b-KQH"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oec-xy-xaU">
+                    <rect key="frame" x="31" y="133" width="252" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-Tt-jME" customClass="SquareButton" customModule="TrafficDevils" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="6pa-7h-eSK"/>
+                            </constraints>
+                            <state key="normal" title="No" backgroundImage="squareButton"/>
+                            <connections>
+                                <action selector="negativeButtonAction:" destination="bbO-zo-yps" eventType="touchUpInside" id="XAh-tJ-6ph"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26M-sm-8Hj" customClass="SquareButton" customModule="TrafficDevils" customModuleProvider="target">
+                            <rect key="frame" x="130" y="0.0" width="122" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gc5-l0-xGC"/>
+                            </constraints>
+                            <state key="normal" title="Yes" backgroundImage="squareButton"/>
+                            <connections>
+                                <action selector="positiveButtonAction:" destination="bbO-zo-yps" eventType="touchUpInside" id="U0W-ST-Jvr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Highscore?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grR-UN-F8u">
+                    <rect key="frame" x="30" y="30" width="254" height="105"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                    <color key="textColor" red="0.86247622970000004" green="0.46782457830000002" blue="0.089029483500000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="highlightedColor" red="0.49931174519999999" green="0.1914122701" blue="0.01563161612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="shadowColor" red="0.43196496369999998" green="0.16815781590000001" blue="0.0083643449470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <size key="shadowOffset" width="-1" height="1"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Xzx-Su-ibe"/>
+            <constraints>
+                <constraint firstItem="snh-Xw-hjI" firstAttribute="top" secondItem="grR-UN-F8u" secondAttribute="top" constant="-30" id="6xg-YY-YtZ"/>
+                <constraint firstItem="snh-Xw-hjI" firstAttribute="leading" secondItem="Xzx-Su-ibe" secondAttribute="leading" id="9La-91-Czo"/>
+                <constraint firstItem="Xzx-Su-ibe" firstAttribute="bottom" secondItem="oec-xy-xaU" secondAttribute="bottom" id="Fbx-vm-1m9"/>
+                <constraint firstItem="snh-Xw-hjI" firstAttribute="bottom" secondItem="grR-UN-F8u" secondAttribute="bottom" constant="35" id="NgD-LY-aGx"/>
+                <constraint firstItem="snh-Xw-hjI" firstAttribute="trailing" secondItem="Xzx-Su-ibe" secondAttribute="trailing" id="hel-tu-jKo"/>
+                <constraint firstItem="oec-xy-xaU" firstAttribute="leading" secondItem="Xzx-Su-ibe" secondAttribute="leading" constant="31" id="lHR-j5-a2e"/>
+                <constraint firstItem="grR-UN-F8u" firstAttribute="leading" secondItem="snh-Xw-hjI" secondAttribute="leading" constant="30" id="pQC-oj-q6i"/>
+                <constraint firstItem="snh-Xw-hjI" firstAttribute="top" secondItem="bbO-zo-yps" secondAttribute="top" id="ppm-h9-zGQ"/>
+                <constraint firstItem="grR-UN-F8u" firstAttribute="trailing" secondItem="snh-Xw-hjI" secondAttribute="trailing" constant="-30" id="q0Q-gj-MIp"/>
+                <constraint firstItem="Xzx-Su-ibe" firstAttribute="trailing" secondItem="oec-xy-xaU" secondAttribute="trailing" constant="31" id="uTn-Na-4G8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="grR-UN-F8u" id="o1Y-ro-zJx"/>
+                <outlet property="negativeButton" destination="ccz-Tt-jME" id="DFi-iE-Bf0"/>
+                <outlet property="positiveButton" destination="26M-sm-8Hj" id="OW0-fs-c3E"/>
+            </connections>
+            <point key="canvasLocation" x="63.768115942028992" y="-127.56696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="score" width="199.5" height="88.5"/>
+        <image name="squareButton" width="199.5" height="90.5"/>
+    </resources>
+</document>

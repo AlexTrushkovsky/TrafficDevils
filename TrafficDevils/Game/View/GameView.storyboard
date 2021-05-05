@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GameView-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" userLabel="GameView" customClass="GameController" customModule="TrafficDevils" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GameView" id="5EZ-qb-Rvc" userLabel="GameView" customClass="GameContoller" customModule="TrafficDevils" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="OKV-9j-ATO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucV-V7-hi3" customClass="ShareButton" customModule="TrafficDevils" customModuleProvider="target">
+                                <rect key="frame" x="320.66666666666669" y="10" width="68.333333333333314" height="68.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ucV-V7-hi3" secondAttribute="height" multiplier="1:1" id="JLl-iF-1xI"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="shareButton"/>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bZg-WY-5Uu"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WkK-If-0WB">
+                                <rect key="frame" x="18" y="220.66666666666663" width="378" height="378"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YTS-3D-HvA">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="88.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ8-p9-6Qs" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FZ8-p9-6Qs" secondAttribute="height" multiplier="1:1" id="xR4-N1-utS"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yMr-Ej-wVW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th2-3q-r8g" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="96.666666666666686" y="0.0" width="88.333333333333314" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="e9e-lQ-XSM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-Kh-8Cq" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="193" y="0.0" width="88.333333333333314" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Sc8-29-6vn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ka-u3-LJa" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="289.33333333333331" y="0.0" width="88.666666666666686" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="etJ-kK-SOF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HXn-xq-lYT">
+                                        <rect key="frame" x="0.0" y="96.666666666666657" width="378" height="88.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-nJ-JBm" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VZt-nJ-JBm" secondAttribute="height" multiplier="1:1" id="V5U-sL-kAc"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MCE-bC-9u3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-Lx-fCE" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="96.666666666666686" y="0.0" width="88.333333333333314" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="34P-ah-IZO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-c3-NSQ" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="193" y="0.0" width="88.333333333333314" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zJp-1i-DZa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi4-Nk-Gce" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="289.33333333333331" y="0.0" width="88.666666666666686" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Gg4-Mv-lKg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dlu-TV-wrP">
+                                        <rect key="frame" x="0.0" y="193.00000000000003" width="378" height="88.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-lf-dUc" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Coo-lf-dUc" secondAttribute="height" multiplier="1:1" id="u18-Zh-asa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FlU-Dn-IVa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-tO-OcL" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="96.666666666666686" y="0.0" width="88.333333333333314" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CJx-7A-rCf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="307-Mr-oFR" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="193" y="0.0" width="88.333333333333314" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fUG-ZZ-kO8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxs-P5-7Rp" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="289.33333333333331" y="0.0" width="88.666666666666686" height="88.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PAI-Cu-Y2g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="neV-HP-OCC">
+                                        <rect key="frame" x="0.0" y="289.33333333333337" width="378" height="88.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEv-oK-6ii" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="AEv-oK-6ii" secondAttribute="height" multiplier="1:1" id="90h-dz-drj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SzV-Kw-Fh3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X91-Cw-KSw" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="96.666666666666686" y="0.0" width="88.333333333333314" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UBE-ZG-DOF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-ea-d5X" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="193" y="0.0" width="88.333333333333314" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ohi-yK-bX9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-eT-zvv" customClass="GameButton" customModule="TrafficDevils" customModuleProvider="target">
+                                                <rect key="frame" x="289.33333333333331" y="0.0" width="88.666666666666686" height="88.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mAC-gl-qGK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Kn8-mz-aJP">
+                                <rect key="frame" x="114.66666666666667" y="618.66666666666663" width="184.66666666666663" height="77.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-mv-ofB" customClass="BackButton" customModule="TrafficDevils" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="77.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="K2L-mv-ofB" secondAttribute="height" multiplier="1:1" id="ZWf-cz-l9r"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="startButton"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eZN-H1-Qya"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGs-NK-soq" customClass="CircleButton" customModule="TrafficDevils" customModuleProvider="target">
+                                        <rect key="frame" x="107.33333333333334" y="0.0" width="77.333333333333343" height="77.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UGs-NK-soq" secondAttribute="height" multiplier="1:1" id="9lk-XY-xLD"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="circleButton"/>
+                                        <connections>
+                                            <action selector="touchNewGameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qHT-BI-ehS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="e41-f7-1fU">
+                                <rect key="frame" x="92.666666666666671" y="100" width="228.66666666666663" height="100.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e41-f7-1fU" secondAttribute="height" multiplier="199:88" constant="1.0056818181818414" id="p1Y-Q8-xmT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clO-VT-Ses" customClass="HighScoreButton" customModule="TrafficDevils" customModuleProvider="target">
+                                <rect key="frame" x="25" y="10" width="170.66666666666666" height="68.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="clO-VT-Ses" secondAttribute="height" multiplier="5:2" id="WFg-05-BaY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="0" backgroundImage="highScore"/>
+                                <connections>
+                                    <action selector="highScoreInfoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C0g-z7-ITT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Im5-Zn-uHa">
+                                <rect key="frame" x="92.666666666666671" y="100" width="228.66666666666663" height="100.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.86247622970000004" green="0.46782457830000002" blue="0.089029483500000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.49931174519999999" green="0.1914122701" blue="0.01563161612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.43137254901960786" green="0.16862745098039217" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="-1" height="1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ucV-V7-hi3" secondAttribute="trailing" constant="25" id="17b-xD-Mkw"/>
+                            <constraint firstItem="clO-VT-Ses" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="7Nj-d3-WLV"/>
+                            <constraint firstItem="e41-f7-1fU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Akd-Ab-fLg"/>
+                            <constraint firstItem="clO-VT-Ses" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Dli-vr-aRj"/>
+                            <constraint firstItem="Kn8-mz-aJP" firstAttribute="top" secondItem="WkK-If-0WB" secondAttribute="bottom" constant="20" id="EH4-wA-yAl"/>
+                            <constraint firstItem="WkK-If-0WB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EMT-eY-AnI"/>
+                            <constraint firstItem="e41-f7-1fU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="N3s-YT-qPU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="Im5-Zn-uHa" firstAttribute="bottom" secondItem="e41-f7-1fU" secondAttribute="bottom" id="Na4-OR-IWT"/>
+                            <constraint firstItem="Im5-Zn-uHa" firstAttribute="leading" secondItem="e41-f7-1fU" secondAttribute="leading" id="RSm-jV-VTS"/>
+                            <constraint firstItem="ucV-V7-hi3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Rq5-gh-7Mf"/>
+                            <constraint firstItem="Im5-Zn-uHa" firstAttribute="height" secondItem="Kn8-mz-aJP" secondAttribute="height" multiplier="1.30147" id="UUA-ok-I9L"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Kn8-mz-aJP" secondAttribute="bottom" constant="40" id="Wms-yy-NQS"/>
+                            <constraint firstItem="Kn8-mz-aJP" firstAttribute="leading" secondItem="X91-Cw-KSw" secondAttribute="leading" id="bAj-eg-YON"/>
+                            <constraint firstItem="e41-f7-1fU" firstAttribute="trailing" secondItem="Im5-Zn-uHa" secondAttribute="trailing" id="bUl-GP-DyQ"/>
+                            <constraint firstItem="WkK-If-0WB" firstAttribute="top" secondItem="e41-f7-1fU" secondAttribute="bottom" constant="20" id="dLn-gt-V4M"/>
+                            <constraint firstItem="clO-VT-Ses" firstAttribute="height" secondItem="Im5-Zn-uHa" secondAttribute="height" multiplier="0.677966" id="gdH-dJ-aqb"/>
+                            <constraint firstItem="Kn8-mz-aJP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kvl-q9-VMc"/>
+                            <constraint firstItem="ucV-V7-hi3" firstAttribute="top" secondItem="clO-VT-Ses" secondAttribute="top" id="sa4-vJ-gAT"/>
+                            <constraint firstItem="OKV-9j-ATO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tbI-b3-Kkn"/>
+                            <constraint firstItem="OKV-9j-ATO" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="ukb-rg-DlG"/>
+                            <constraint firstItem="OKV-9j-ATO" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="wPj-Sq-VQL"/>
+                            <constraint firstItem="OKV-9j-ATO" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="zYg-6E-XoN"/>
+                            <constraint firstItem="Im5-Zn-uHa" firstAttribute="top" secondItem="e41-f7-1fU" secondAttribute="top" id="zh3-tV-wvp"/>
+                            <constraint firstItem="ucV-V7-hi3" firstAttribute="bottom" secondItem="clO-VT-Ses" secondAttribute="bottom" id="zwU-SW-zLk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BackButton" destination="K2L-mv-ofB" id="ZGP-Oh-XSt"/>
+                        <outlet property="highScoreButton" destination="clO-VT-Ses" id="k1Z-17-lKE"/>
+                        <outlet property="newGameButton" destination="UGs-NK-soq" id="0IK-kO-o54"/>
+                        <outlet property="scoreLabel" destination="Im5-Zn-uHa" id="pxq-Dr-VQc"/>
+                        <outletCollection property="cardButtons" destination="FZ8-p9-6Qs" collectionClass="NSMutableArray" id="LZb-Fk-8bA"/>
+                        <outletCollection property="cardButtons" destination="th2-3q-r8g" collectionClass="NSMutableArray" id="VMh-rb-Qtq"/>
+                        <outletCollection property="cardButtons" destination="RhH-Kh-8Cq" collectionClass="NSMutableArray" id="S4f-Cg-4up"/>
+                        <outletCollection property="cardButtons" destination="4Ka-u3-LJa" collectionClass="NSMutableArray" id="qQx-bZ-cWa"/>
+                        <outletCollection property="cardButtons" destination="VZt-nJ-JBm" collectionClass="NSMutableArray" id="3VL-Ed-nrQ"/>
+                        <outletCollection property="cardButtons" destination="JEG-Lx-fCE" collectionClass="NSMutableArray" id="Xtv-Bs-ndM"/>
+                        <outletCollection property="cardButtons" destination="J4W-c3-NSQ" collectionClass="NSMutableArray" id="8st-9R-qe1"/>
+                        <outletCollection property="cardButtons" destination="qi4-Nk-Gce" collectionClass="NSMutableArray" id="uMc-3F-ppC"/>
+                        <outletCollection property="cardButtons" destination="Coo-lf-dUc" collectionClass="NSMutableArray" id="BxQ-iX-980"/>
+                        <outletCollection property="cardButtons" destination="ReW-tO-OcL" collectionClass="NSMutableArray" id="vST-60-zQM"/>
+                        <outletCollection property="cardButtons" destination="307-Mr-oFR" collectionClass="NSMutableArray" id="nhb-6b-Dnu"/>
+                        <outletCollection property="cardButtons" destination="kxs-P5-7Rp" collectionClass="NSMutableArray" id="RZA-GX-Mhn"/>
+                        <outletCollection property="cardButtons" destination="AEv-oK-6ii" collectionClass="NSMutableArray" id="zP3-bd-ot9"/>
+                        <outletCollection property="cardButtons" destination="X91-Cw-KSw" collectionClass="NSMutableArray" id="rGr-xo-Qe7"/>
+                        <outletCollection property="cardButtons" destination="vfe-ea-d5X" collectionClass="NSMutableArray" id="0dp-kV-Wih"/>
+                        <outletCollection property="cardButtons" destination="HLX-eT-zvv" collectionClass="NSMutableArray" id="qFh-1y-xCP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="68.815592203898049"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage" width="2222.333251953125" height="1389"/>
+        <image name="circleButton" width="60.333332061767578" height="64"/>
+        <image name="highScore" width="212.33332824707031" height="93.666664123535156"/>
+        <image name="score" width="199.5" height="88.5"/>
+        <image name="shareButton" width="60.333332061767578" height="64"/>
+        <image name="startButton" width="68.5" height="90"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
